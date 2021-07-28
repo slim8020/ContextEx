@@ -1,6 +1,7 @@
  import React from 'react';
  import styled from 'styled-components/native';
  import User from './components/User';
+ import UserContext from './contexts/User';
 
 
  const Container = styled.View`
@@ -13,9 +14,12 @@
 
  const App = () => {
    return (
-    <Container>
-      <User/>
-    </Container>
+     <UserContext.Provider value={{name: 'MyeongJune'}}>
+        <Container>
+          <User/>
+       </Container>
+     </UserContext.Provider>
+
    );
  };
  

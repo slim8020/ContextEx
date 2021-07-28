@@ -10,9 +10,11 @@ const StyledText = styled.Text`
 const User = () => {
     
     return (
+        <UserContext.Provider value={{name: 'Babo'}}>
         <UserContext.Consumer>
             {value => <StyledText>Name: {value.name}</StyledText>}
         </UserContext.Consumer>
+        </UserContext.Provider>
     );
 
 };
